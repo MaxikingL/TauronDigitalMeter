@@ -2,15 +2,10 @@ package com.TauronDigitalMeter.app;
 
 
 import base.Hooks;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.HomePage;
 import pages.LoginPage;
 
 import java.io.IOException;
-
-import static base.BasePage.getDriver;
 
 public class LoginTest extends Hooks {
 
@@ -25,9 +20,13 @@ public LoginTest() throws IOException {
     public void loginTest() throws IOException {
 
 
-        HomePage homePage = new HomePage();
+       LoginPage loginPage = new LoginPage();
 
-        homePage.getTestStoreLink().click();
+       loginPage.getEmailInput().sendKeys("bozenkalema@gmail.com");
+
+       loginPage.getPassword().sendKeys("foto9Power");
+
+        loginPage.clickLoginButton().click();
 
 
 

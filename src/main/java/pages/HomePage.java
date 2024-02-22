@@ -21,10 +21,5 @@ public class HomePage extends BasePage {
 
 
 
-    public WebElement getTestStoreLink() throws IOException {
 
-        this.driver = getDriver();
-
-       return driver.findElement(By.linkText("Zaloguj"));
-    }
 }

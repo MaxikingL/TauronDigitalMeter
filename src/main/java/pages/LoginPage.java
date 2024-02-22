@@ -11,6 +11,9 @@ import java.io.IOException;
 public class LoginPage extends BasePage {
 
     By  loginButton = By.cssSelector("#loginForm > div.mt-3 > button");
+    By emailInput = By.cssSelector("#exampleInputEmail1");
+    By passwordInput = By.cssSelector("#exampleInputPassword1");
+
 
 
     public WebDriver driver;
@@ -20,15 +23,23 @@ public class LoginPage extends BasePage {
    }
 
 
-   public WebElement clickLoginButton() throws IOException {
-
-
-
+   public WebElement getEmailInput() throws IOException {
        this.driver = getDriver();
-       return driver.findElement(loginButton);
-
+       return driver.findElement(emailInput);
 
    }
+
+    public WebElement getPassword() throws IOException {
+        this.driver = getDriver();
+        return driver.findElement(passwordInput);
+
+    }
+
+    public WebElement clickLoginButton() throws IOException {
+
+        this.driver = getDriver();
+        return driver.findElement(loginButton);
+    }
 
 
 
